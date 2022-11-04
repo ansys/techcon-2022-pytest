@@ -91,30 +91,30 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
+\begin{frame}
+  \frametitle{Content}
+  \tableofcontents[currentsection]
+  \vspace{200pt}  %% force top left
+\end{frame}
+
 \begin{frame}[fragile=singleslide]
-  \frametitle{What is test-driven development (TDD)}
+  \frametitle{Introduction}
 
   \begin{itemize}
+  \setlength\itemsep{1em}
 
-  \item{\textbf{What is test-driven development?}
-    
-    As soon as the code base gets modified, a collection of tests get executed
+  \item{\textbf{What is test-driven development (TDD)?}
+    \\As soon as the code base gets modified, a collection of tests get executed
     to guarantee the integrity of the new code.
-
   }
 
   \item{\textbf{What are its main advantages?}
- 
-    It allows developers to develop code in a faster and robust manner.
-
+    \\It allows to generate and modify code in a faster and robust manner.
     }
 
         
   \item {\textbf{pytest as the main testing framework for PyAnsys}
-
-    The pytest testing framework is the reference one in the Pyton community. It
-    easy to use, fast and highly customizable.
-
+    \\The pytest testing framework is the reference one in the Python community.
     }
 
   \end{itemize}
@@ -140,6 +140,8 @@
         \item Use the \textit{assert} keyword to compare current and expected results.
         \item Run your tests by executing \textit{pytest vv tests}
    \end{itemize}
+
+   \inputminted[fontsize=\footnotesize]{python}{code/basic_assertion.py}
 
 \end{frame}
 
@@ -170,6 +172,8 @@
        \item Select marked tests by executing \textit{pytest -m <name> -vv tests}
    \end{itemize}
 
+   \inputminted[fontsize=\footnotesize]{python}{code/marked_test.py}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -183,20 +187,30 @@
            \item Parametrizing is done by using the \textit{pytest.mark.parametrize} decorator.
    \end{itemize}
 
+   \inputminted[fontsize=\footnotesize]{python}{code/parametrized_test.py}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{A plethora of plugins!}
+\subsection{A plethora of plugins}
 \begin{frame}[fragile=singleslide]
   \frametitle{A plethora of plugins}
+
+   It is possible to extend the capabilities of pytest by creating and using plugins.
+
+   \vspace{1em}
 
    \begin{itemize}
        \item Pytest integrates with the \textit{unittest} module from Python STD library.
        \item Pytest integrates can test for \textit{doctests} too.
-       \item Code coverage via \textit{pytest-cov}, see https://pypi.org/project/pytest-cov/
-       \item Matplotlib image testing via \textit{pytest-mpl} see https://pypi.org/project/pytest-mpl/
-       \item Property-based testing via \textit{hypothesis}, see https://pypi.org/project/hypothesis/
+       \item Code coverage with \href{https://pypi.org/project/pytest-cov/}{https://pypi.org/project/pytest-cov/}
+       \item Matplotlib testing with \href{https://pypi.org/project/pytest-mpl/}{https://pypi.org/project/pytest-mpl/}
+       \item Property-based testing with see \href{https://pypi.org/project/hypothesis/}{https://pypi.org/project/hypothesis/}
    \end{itemize}
+
+   \vspace{1em}
+
+   % Check out the official list of plugins \href{https://docs.pytest.org/en/latest/reference/plugin_list.html}{https://docs.pytest.org/en/latest/reference/plugin_list.html}
 
 \end{frame}
 
@@ -211,6 +225,9 @@
         \item It allows PyAnsys projects to run on multiple OS under multiple Python versions.
    \end{itemize}
 
+  \centering
+  \includegraphics[height=.5\textheight]{./figures/gh_actions_pipeline.png}
+
 \end{frame}
 
 
@@ -223,10 +240,22 @@
         and taking advantage of CI/CD, visit the PyAnsys official developer's
         guide.
 
+        \vspace{1em}
+        \centering
+
+        \vspace{1em}
+        \textbf{How-to testing}
+        \\\href{https://dev.docs.pyansys.com/how-to/testing.html}{https://dev.docs.pyansys.com/how-to/testing.html}
+
+        \vspace{1em}
+        \textbf{How-to use continuous-integration}
+        \\\href{https://dev.docs.pyansys.com/how-to/continuous-integration.html}{https://dev.docs.pyansys.com/how-to/continuous-integration.html}
+
+        \vspace{1em}
+        \textbf{PyAnsys developer's guide}
+        \\\href{https://dev.docs.pyansys.com/}{https://dev.docs.pyansys.com/}
+
 \end{frame}
-
-
-
 
 
 \lastframe{}
