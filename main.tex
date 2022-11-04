@@ -73,7 +73,7 @@
 %% Title Slide
 
 \title{PyAnsys tools for unit testing}
-\subtitle{Applying test driven development}
+\subtitle{Applying test-driven development}
 \author{Author: PyAnsys Core Team}
 \date{\today}
 
@@ -90,36 +90,30 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Using this Theme}
+\section{Introduction}
 \begin{frame}[fragile=singleslide]
-  \frametitle{Using this Theme}
+  \frametitle{What is test-driven development (TDD)}
 
   \begin{itemize}
 
-  \item{\textbf{Installation}
+  \item{\textbf{What is test-driven development?}
     
-    On Linux, you'll need to install LaTeX and
-    \href{https://www.luatex.org/}{LuaTeX}. On Ubuntu you can do this with:
+    As soon as the code base gets modified, a collection of tests get executed
+    to guarantee the integrity of the new code.
 
-    \begin{lstlisting}[language=bash,basicstyle=\footnotesize\ttfamily]
-sudo apt update
-sudo apt install -y latexmk texlive-luatex texlive-fonts-extra
-    \end{lstlisting}
-
-
-    On Windows, follow the directions at
-    \href{https://www.latex-project.org/get/}{Getting LaTeX} and download the
-    \href{HTTP://www.tug.org/texlive}{TeX Live} distribution. It's the easiest
-    way to get started.
   }
 
-  \item{\textbf{Building}
+  \item{\textbf{What are its main advantages?}
+ 
+    It allows developers to develop code in a faster and robust manner.
 
-    Build a PDF from the text file with:
+    }
 
-    \begin{lstlisting}[language=bash,basicstyle=\footnotesize\ttfamily]
-latexmk -pdflatex=lualatex -pdf sample.tex -interaction=nonstopmode -outdir=./build
-    \end{lstlisting}
+        
+  \item {\textbf{pytest as the main testing framework for PyAnsys}
+
+    The pytest testing framework is the reference one in the Pyton community. It
+    easy to use, fast and highly customizable.
 
     }
 
@@ -128,7 +122,7 @@ latexmk -pdflatex=lualatex -pdf sample.tex -interaction=nonstopmode -outdir=./bu
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Slide Types}
+\section{An overview of pytest capabilities}
 
 \begin{frame}
   \frametitle{Content}
@@ -137,19 +131,19 @@ latexmk -pdflatex=lualatex -pdf sample.tex -interaction=nonstopmode -outdir=./bu
 \end{frame}
 
 
-\subsection{Basic Slide}
+\subsection{Basic assertions with pytest}
 \begin{frame}[fragile=singleslide]  % must use fragile with any input listing
-  \frametitle{Basic Slide}
+  \frametitle{Basic assertions with pytest}
 
-  A basic slide consists of:
-
-  \lstinputlisting[basicstyle=\footnotesize\ttfamily]{code/slideframe.tex}
-
-  The output from the above source is the following slide.
+   \begin{itemize}
+        \item Tests are defined using functions starting with the \textit{test} prefix.
+        \item Use the \textit{assert} keyword to compare current and expected results.
+        \item Run your tests by executing \textit{pytest -vv tests/}
+   \end{itemize}
 
 \end{frame}
 
-\input{code/slideframe.tex}
+\input{code/basic_assertion.py}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Transition Slide}
