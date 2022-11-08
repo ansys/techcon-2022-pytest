@@ -1,2 +1,7 @@
-def test_add_two_integers():
-    assert 1 + 2 == 3
+# content of test_sample.py
+def inc(x):
+    return x + 1
+
+
+def test_answer():
+    assert inc(3) == 5
