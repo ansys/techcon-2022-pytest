@@ -12,9 +12,9 @@ Please feel free to point out any problems with this presentation by opening an 
 
 ### View the Presentation
 
-Visit [techcon_2022_pytest.pdf]() to see the full generated presentation.
+Visit [techcon_2022_pytest.pdf](https://stunning-engine-c7d73ea3.pages.github.io/techcon_2022_pytest.pdf) to see the full generated presentation.
 
-[![techcon_2022_pytest.pdf](figures/for_readme.png)](https://ansys.github.io/techcon-2022-pyvista/techcon_2022_pytest.pdf)
+[![techcon_2022_pytest.pdf](figures/for_readme.png)](https://stunning-engine-c7d73ea3.pages.github.io/techcon_2022_pytest.pdf)
 
 ## Build it Yourself
 
